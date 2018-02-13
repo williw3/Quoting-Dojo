@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Quotes</title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Here are the awesome quotes!</h1>
+        @{
+            foreach (var quote in @ViewBag.allQuotes)
+            {
+                <p>@quote["id"]</p>
+                <p>@quote["quote"]</p>
+                <p>- @quote["name"]</p>
+                <p>@quote["created_at"]<a href="deleteQuote/@quote["id"]"> Delete</a></p>
+                <hr>
+            }
+        }
+    </body>
+</html>
+

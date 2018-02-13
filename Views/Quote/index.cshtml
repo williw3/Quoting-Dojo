@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Quoting Dojo</title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <h3>@ViewBag.Error</h3>
+        <h1>Welcome to Quoting Dojo</h1>
+        <form action="addQuote" method="post">
+                Your name:<br>
+                <input type="text" name="name"><br>
+                Your Quote:<br>
+                <textarea name="quote" cols="60" rows="6" placeholder="...please leave a quote"></textarea><br>
+            <input type="submit" value="Add my Quote">
+        </form>
+        <form action="showQuote" method="get">
+                <input type="submit" value="Skip to quotes!">
+        </form>
+    </body>
+</html>
+
